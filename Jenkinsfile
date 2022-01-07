@@ -10,15 +10,14 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './gradlew check'
+                cat builded.txt
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-            junit 'build/reports/**/*.xml'
+            archiveArtifacts artifacts: 'builded.txt', fingerprint: true
         }
     }
 }
