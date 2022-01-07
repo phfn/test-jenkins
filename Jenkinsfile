@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'ls'
+                cat builded.txt
             }
         }
     }
