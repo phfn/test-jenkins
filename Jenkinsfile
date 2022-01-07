@@ -13,6 +13,11 @@ pipeline {
                 sh 'echo "build">builded.txt'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'ls'
+            }
+        }
     }
 
     post {
