@@ -5,13 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                ls
-                echo 'build'>builded.txt
-            }
-        }
-        stage('Test') {
-            steps {
-                cat builded.txt
+                sh 'ls'
             }
         }
     }
