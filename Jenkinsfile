@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                ls
                 echo 'build'>builded.txt
             }
         }
