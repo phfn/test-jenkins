@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './gradlew build'
+                echo 'build'>builded.txt
             }
         }
         stage('Test') {
