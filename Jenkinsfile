@@ -3,9 +3,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('ls') {
             steps {
                 sh 'ls'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'echo "build">builded.txt'
             }
         }
     }
